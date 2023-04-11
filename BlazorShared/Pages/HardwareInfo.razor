@@ -1,0 +1,41 @@
+﻿@page "/HardwareInfo"
+
+@inject BlazorShared.Interfaces.IHardware HW
+
+@inject Microsoft.JSInterop.IJSRuntime JSRunntime
+
+    <div>
+        <p>*OS :  @_Os </p>
+        <p>*Is Browser :  @_IsBrowser </p>
+        <p>*Manufacturer :  @_Manufacturer </p>
+        <p>*Model: @_Model </p>
+        <button @onclick='(() => Prompt("Message"))'>Call JS prompt</button>
+    
+    </div>
+
+@code {
+   
+    string _Os = string.Empty;
+    bool _IsBrowser = true;
+    string _Manufacturer = string.Empty;
+    string _Model = string.Empty;
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _Os = await HW.GetOs();
+            _IsBrowser = HW.IsBrowser;
+            _Manufacturer = await HW.GetManufacturer();
+            _Model = await HW.GetModel();
+            StateHasChanged();
+        }
+    }
+   
+    private async Task Prompt(string msg)
+    {
+        ExampleJsInterop ExampleJsInterop = new(JSRunntime);
+        await ExampleJsInterop.Prompt(msg);
+    }
+   
+}
+
