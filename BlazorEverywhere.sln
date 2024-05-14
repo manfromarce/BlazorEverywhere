@@ -18,6 +18,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinUiBlazorApp", "WinUiBlaz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{754E7096-A9C5-4776-BA10-925B3371BF3F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotinoBlazorApp", "PhotinoBlazorApp\PhotinoBlazorApp.csproj", "{0E5D034E-85C3-4A57-A184-7D65670E5F76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -174,6 +176,22 @@ Global
 		{754E7096-A9C5-4776-BA10-925B3371BF3F}.Release|x64.Build.0 = Release|Any CPU
 		{754E7096-A9C5-4776-BA10-925B3371BF3F}.Release|x86.ActiveCfg = Release|Any CPU
 		{754E7096-A9C5-4776-BA10-925B3371BF3F}.Release|x86.Build.0 = Release|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Debug|x64.Build.0 = Debug|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Debug|x86.Build.0 = Debug|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Release|ARM64.Build.0 = Release|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Release|x64.ActiveCfg = Release|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Release|x64.Build.0 = Release|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Release|x86.ActiveCfg = Release|Any CPU
+		{0E5D034E-85C3-4A57-A184-7D65670E5F76}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

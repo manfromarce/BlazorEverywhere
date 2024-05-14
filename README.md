@@ -8,6 +8,7 @@ This project shows how to easily reuse Blazor UI and code across multiple web an
 - WPF + [BlazorWebView](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-7.0) (Windows)
 - Windows Forms + [BlazorWebView](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/windows-forms?view=aspnetcore-7.0) (Windows)
 - WinUI 3 + [MAUI Embedding](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/native-embedding?view=net-maui-7.0) (Windows). Thanks to everyone who described the required workarounds in [this issue](https://github.com/dotnet/maui/issues/7380) the project builds and runs properly, but there are drawbacks, e.g. WinUi assets can't be used because they break the build, so they have been replaced with MAUI assets. Hopefully BlazorWebView for WinUI will be officially supported in the future so that some of these workarounds will no longer be needed.
+- [Photino.Blazor](https://github.com/tryphotino/photino.Blazor) (Windows, MacOS, Linux)
 
 Other frameworks will be added in the future.
 
