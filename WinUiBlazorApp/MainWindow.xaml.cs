@@ -67,9 +67,19 @@ namespace WinUiBlazorApp
             rootGrid.Children.Add(_blazorWebView);
         }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private async void myButton_Click(object sender, RoutedEventArgs e)
         {
             myButton.Content = "Clicked";
+
+            ContentDialog contentDialog = new ContentDialog
+            {
+                Title = AppDomain.CurrentDomain.FriendlyName,
+                Content = "This a WinUI ContentDialog.",
+                CloseButtonText = "OK", 
+                DefaultButton = ContentDialogButton.Close,
+                XamlRoot = this.rootGrid.XamlRoot
+            };
+            var result = await contentDialog.ShowAsync();
         }
     }
 }

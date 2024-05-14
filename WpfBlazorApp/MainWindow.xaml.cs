@@ -41,7 +41,7 @@ namespace WpfBlazorApp
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("This is a native WPF MessageBox.", AppDomain.CurrentDomain.FriendlyName, MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

@@ -71,12 +71,12 @@
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Update="Microsoft.AspNetCore.Components.WebView.Maui" Version="8.0.21" />
+    <PackageReference Update="Microsoft.AspNetCore.Components.WebView.Maui" Version="8.0.40" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.21" />
+    <PackageReference Update="Microsoft.Maui.Controls" Version="8.0.40" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.21" />
+    <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.40" />
   </ItemGroup>
 </Project>
