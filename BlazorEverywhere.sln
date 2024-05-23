@@ -4,9 +4,9 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiBlazorApp", "MauiBlazorApp\MauiBlazorApp.csproj", "{BB5A5EB4-66BE-45FF-A56B-A93E85C4320F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasmApp.Client", "BlazorWasmApp.Client\BlazorWasmApp.Client.csproj", "{C4E60DA2-FE50-480D-A5F5-FF2EBAAF847A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasmApp.Client", "BlazorWasm\BlazorWasmApp.Client\BlazorWasmApp.Client.csproj", "{C4E60DA2-FE50-480D-A5F5-FF2EBAAF847A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasmApp.Server", "BlazorWasmApp.Server\BlazorWasmApp.Server.csproj", "{23C96871-63A2-4676-8519-21C458855A5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasmApp.Server", "BlazorWasm\BlazorWasmApp.Server\BlazorWasmApp.Server.csproj", "{23C96871-63A2-4676-8519-21C458855A5E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorShared", "BlazorShared\BlazorShared.csproj", "{C6A4493D-1A0F-4541-994E-EEF78E51A510}"
 EndProject
@@ -14,11 +14,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfBlazorApp", "WpfBlazorAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsBlazorApp", "WinFormsBlazorApp\WinFormsBlazorApp.csproj", "{92B8E72F-1E74-43BE-B076-9941DEDC5BC8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinUiBlazorApp", "WinUiBlazorApp\WinUiBlazorApp.csproj", "{D9D64D36-454D-40E4-9D8F-A22408C8787C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinUiBlazorApp", "WinUI\WinUiBlazorApp\WinUiBlazorApp.csproj", "{D9D64D36-454D-40E4-9D8F-A22408C8787C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{754E7096-A9C5-4776-BA10-925B3371BF3F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotinoBlazorApp", "PhotinoBlazorApp\PhotinoBlazorApp.csproj", "{0E5D034E-85C3-4A57-A184-7D65670E5F76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Avalonia", "Avalonia", "{865CDA12-4F3C-454A-A0EE-E840D0F7E1A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorWasm", "BlazorWasm", "{40FA1832-84F9-4F4C-9ADD-65A4D5C78C17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinUI", "WinUI", "{78967BF7-8790-411E-8253-256D631A4974}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -195,6 +201,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4E60DA2-FE50-480D-A5F5-FF2EBAAF847A} = {40FA1832-84F9-4F4C-9ADD-65A4D5C78C17}
+		{23C96871-63A2-4676-8519-21C458855A5E} = {40FA1832-84F9-4F4C-9ADD-65A4D5C78C17}
+		{D9D64D36-454D-40E4-9D8F-A22408C8787C} = {78967BF7-8790-411E-8253-256D631A4974}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
