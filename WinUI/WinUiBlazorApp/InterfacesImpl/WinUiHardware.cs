@@ -1,5 +1,4 @@
 ﻿using BlazorShared.Interfaces;
-using Microsoft.Maui.Devices;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Windows.Devices.Enumeration;
@@ -14,17 +13,17 @@ namespace WinUiBlazorApp.InterfacesImpl
 
         public async Task<string> GetOs()
         {
-            return await Task.FromResult(DeviceInfo.Platform.ToString() + " " + DeviceInfo.VersionString);
+            return RuntimeInformation.OSDescription;
         }
 
         public async Task<string> GetManufacturer()
         {
-            return await Task.FromResult(DeviceInfo.Manufacturer);
+            return "-";
         }
 
         public async Task<string> GetModel()
         {
-            return await Task.FromResult(DeviceInfo.Model);
+            return "-";
         }
 
     }

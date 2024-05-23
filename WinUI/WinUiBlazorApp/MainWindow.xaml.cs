@@ -3,12 +3,7 @@
 
 using BlazorShared.Data;
 using BlazorShared.Interfaces;
-using Microsoft.AspNetCore.Components.WebView.Maui;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Maui;
-using Microsoft.Maui.Embedding;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Platform;
 using Microsoft.UI;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -21,11 +16,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+using System.Net.Http;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using WinUiBlazorApp.InterfacesImpl;
-using static Microsoft.Maui.Dispatching.Dispatcher;
+using Microsoft.AspNetCore.Components.WebView.WinUI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,34 +32,26 @@ namespace WinUiBlazorApp
     /// </summary>
     public sealed partial class MainWindow : Window
     {
-        public FrameworkElement _blazorWebView;
-        public MauiContext _mauiContext;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            var services = new ServiceCollection();
-            services.AddSingleton(GetForCurrentThread()!);
-            services.AddMauiBlazorWebView();
-            services.AddSingleton<WeatherForecastService>();
-            services.AddSingleton<WeatherForecastServiceApi>();
-            services.AddSingleton<IHardware, WinUiHardware>();
+            var serviceCollection = new ServiceCollection();
+            serviceCollection.AddWpfBlazorWebView();
+            serviceCollection.AddScoped(sp => new HttpClient());
+            serviceCollection.AddSingleton<WeatherForecastService>();
+            serviceCollection.AddSingleton<WeatherForecastServiceApi>();
+            serviceCollection.AddSingleton<IHardware, WinUiHardware>();
 #if DEBUG
-            services.AddBlazorWebViewDeveloperTools();
+            serviceCollection.AddBlazorWebViewDeveloperTools();
 #endif
-            var mauiBlazorWebView = new BlazorWebView() { HostPage = "wwwroot//index.html" };
-            mauiBlazorWebView.RootComponents.Add(new RootComponent()
+            blazorWebView.Services = serviceCollection.BuildServiceProvider();  
+            blazorWebView.RootComponents.Add(new RootComponent()
             {
                 ComponentType = typeof(BlazorShared.App),
                 Selector = "#app"
             });
-            _mauiContext = new MauiContext(services.BuildServiceProvider());
-            _blazorWebView = mauiBlazorWebView.ToPlatform(_mauiContext);
-            _blazorWebView.HorizontalAlignment = HorizontalAlignment.Stretch;
-            _blazorWebView.VerticalAlignment = VerticalAlignment.Stretch;
-            Grid.SetRow(_blazorWebView, 1);
-            rootGrid.Children.Add(_blazorWebView);
         }
 
         private async void myButton_Click(object sender, RoutedEventArgs e)
