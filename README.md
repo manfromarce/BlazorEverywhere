@@ -10,7 +10,7 @@ This project shows how to easily reuse Blazor UI and code across multiple web an
 - WinUI 3 + unofficial BlazorWebView (Windows 10/11) - Credits: [w-ahmad/BlazorWebView.WinUI3](https://github.com/w-ahmad/BlazorWebView.WinUI3), [dotnet/maui#7380](https://github.com/dotnet/maui/issues/7380).
 - [Photino.Blazor](https://github.com/tryphotino/photino.Blazor) (Windows, MacOS, Linux)
 
-Other frameworks will be added in the future.
+For AvaloniaUI please see [MicroSugarDeveloperOrg/Avalonia.WebView](https://github.com/MicroSugarDeveloperOrg/Avalonia.WebView) and [MicroSugarDeveloperOrg/Avalonia.BlazorWebView.Sample](https://github.com/MicroSugarDeveloperOrg/Avalonia.BlazorWebView.Sample) for now (note: they are not fully compatible with .NET 8 yet).
 
 ### How to use
 1. Clone this repo
